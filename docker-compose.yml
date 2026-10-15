@@ -1,0 +1,12 @@
+﻿version: '3.8'
+services:
+  judge-api:
+    build: .
+    container_name: sop-rag-judge
+    ports:
+      - "3000:3000"
+    volumes:
+      - .\src:/usr/src/app/src
+    env_file:
+      - .env
+    command: npm run dev
